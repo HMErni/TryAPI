@@ -6,6 +6,6 @@ public class StudentGetDto
 {
     public long Id { get; set; }
     public string Name { get; set; }
-    public ICollection<ProfessorListItemDto> Professors { get; set; } = [];
+    public ICollection<ProfessorDto> Professors { get; set; } = [];
 
 }

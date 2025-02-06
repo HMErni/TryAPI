@@ -41,9 +41,9 @@ namespace TryAPI.Controllers
         public async Task<IActionResult> AddProfessor([FromBody] ProfessorDto professorDto)
         {
             var professor = _mapper.Map<Professor>(professorDto);
-            var id = await _repository.AddProfessor(professor);
+            var professor_id = await _repository.AddProfessor(professor);
 
-            return CreatedAtAction(nameof(GetById), new { id = id }, _mapper.Map<ProfessorDto>(professor));
+            return CreatedAtAction(nameof(GetById), new { id = professor_id }, professor);
         }
     }
 }

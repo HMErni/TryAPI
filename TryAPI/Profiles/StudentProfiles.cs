@@ -12,7 +12,6 @@ public class StudentProfiles : Profile
         CreateMap<Student, StudentDto>().ReverseMap();
         CreateMap<Student, StudentGetDto>()
             .ForMember(dest => dest.Professors, opt => opt.MapFrom(src => src.Professors));
-        CreateMap<Student, StudentListItemDto>();
     }
 
 }

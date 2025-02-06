@@ -8,6 +8,6 @@ public class ProfessorGetDto
     public string Name { get; set; }
     public string Subject { get; set; }
 
-    public ICollection<StudentListItemDto> Students { get; set; } = [];
+    public ICollection<StudentDto> Students { get; set; } = [];
 
 }
